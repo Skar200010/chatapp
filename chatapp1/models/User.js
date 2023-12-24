@@ -4,9 +4,9 @@ const Schema = mongoose.Schema;
 const userSchema = new Schema({
   username: { type: String, required: true, unique: true },
   email: { type: String, required: true, unique: true },
-  password: { type: String, required: true },
-  profilePicture: { thumbnail: String, original: Buffer }
-  // Add more fields as needed
+  password: { type: String, required: true , max : 25},
+  profilePicture: { thumbnail: String, original: Buffer },
+ 
 });
 
 module.exports = mongoose.model('User', userSchema);

@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const http = require('http');
 const socketIo = require('socket.io');
+const cors = require('cors');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -13,8 +14,8 @@ const authRouter = require('./routes/authRoutes')
 const chatRouter = require('./routes/chatRoutes')
 
 const app = express();
-const server = http.createServer(app); // Create an HTTP server
-const io = socketIo(server); // Attach Socket.io to the server
+const server = http.createServer(app);  
+const io = socketIo(server); 
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -25,13 +26,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(cors());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/',authRouter);
 app.use('/', chatRouter);
 
-// Socket.io configuration for real-time chat
+
 require('./soket/chatSocket')(io); // Import and configure chatSocket module
 
 // catch 404 and forward to error handler
@@ -50,4 +52,4 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-module.exports =  app , server , io ; // Export app, server, and io for use in other parts of your application
+module.exports =  app , server , io ; 

@@ -7,14 +7,14 @@ exports.createChatRoom = async (req, res) => {
   try {
     const { name, owner } = req.body;
 
-    // Verify that the owner exists in the User collection
+   
     const existingOwner = await User.findById(owner);
 
     if (!existingOwner) {
       return res.status(400).json({ message: 'Owner does not exist' });
     }
 
-    // Check if a chat room with the same name already exists
+   
     const existingChatRoom = await ChatRoom.findOne({ name });
 
     if (existingChatRoom) {
@@ -24,7 +24,7 @@ exports.createChatRoom = async (req, res) => {
     const chatRoom = new ChatRoom({
       name,
       owner,
-      participants: [owner], // Add the owner to the participants list
+      participants: [owner],
     });
 
     const savedChatRoom = await chatRoom.save();
@@ -37,31 +37,31 @@ exports.createChatRoom = async (req, res) => {
 };
 
 
-// Join an existing chat room
+
 exports.joinChatRoom = async (req, res) => {
   try {
     const { roomId, userId } = req.body;
 
-    // Find the chat room by its ID
+    
     const chatRoom = await ChatRoom.findById(roomId);
 
     if (!chatRoom) {
       return res.status(404).json({ message: 'Chat room not found' });
     }
 
-    // Check if the user is already a participant
+    
     if (chatRoom.participants.includes(userId)) {
       return res.status(400).json({ message: 'User is already a participant in this chat room' });
     }
 
-    // Check if the user exists in the user collection
+    
     const user = await User.findById(userId);
 
     if (!user) {
       return res.status(404).json({ message: 'User not found' });
     }
 
-    // Add the user to the participants list
+    
     chatRoom.participants.push(userId);
     await chatRoom.save();
 
@@ -73,19 +73,19 @@ exports.joinChatRoom = async (req, res) => {
 };
 
 
-// Send a message in a chat room
+
 exports.sendMessage = async (req, res) => {
   try {
     const { roomId, senderId, content } = req.body;
 
-    // Check if the chat room exists
+   
     const chatRoom = await ChatRoom.findById(roomId);
 
     if (!chatRoom) {
       return res.status(404).json({ message: 'Chat room not found' });
     }
 
-    // Create a new message
+   
     const message = new Message({
       chatRoom: roomId,
       sender: senderId,
@@ -105,16 +105,16 @@ exports.sendMessage = async (req, res) => {
     try {
       const roomId = req.params.roomId;
   
-      // Find the chat room by its ID
+   
       const chatRoom = await ChatRoom.findById(roomId);
   
       if (!chatRoom) {
         return res.status(404).json({ message: 'Chat room not found' });
       }
   
-      // Fetch messages for the specified chat room
+      
       const messages = await Message.find({ chatRoom: roomId })
-        .populate('sender'); // Optionally populate sender information
+        .populate('sender'); 
   
       res.json(messages);
     } catch (error) {
