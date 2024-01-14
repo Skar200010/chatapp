@@ -21,3 +21,4 @@ const {registerService} = require('../services/auth/register');
     return next(error);
   }
 };
+

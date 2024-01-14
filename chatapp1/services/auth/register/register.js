@@ -13,6 +13,7 @@ const registerService = async (bodyData) => {
     }
 
     const newUser = await registrationUtil.createUser(username, email, password);
+    console.log(newUser)
 
     return newUser;
   } catch (error) {

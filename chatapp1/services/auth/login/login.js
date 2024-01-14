@@ -12,23 +12,26 @@ const loginService = async (bodyData) => {
 
         return {success : false , message : 'user not found'}
       }
-
+      console.log('Input password:', password);
+      console.log('Stored hashed password:', user.password);
 
     const isPasswordMatch = await loginUtil.comparePassword(password, user.password);
+  
     if (isPasswordMatch){
       const token = await loginUtil.generateToken(user._id , user.username )
       await Token.create({ userId: user._id, token, status: true });
+
       
       const loginTime = new Date ()
       scheduleUserLoginNotification(user.username , loginTime);
+      console.log(user.username , user.email)
 
-      return { success: true, token, message: 'Login successful' };
+     return { success: true, token, message: 'Login successful' };
     }
     else {
       return{ success : false , message : 'incorrect password'}
     }
 
-    // return isPasswordMatch;
   } 
     catch (error) {
     console.error('Error in loginUser:', error);

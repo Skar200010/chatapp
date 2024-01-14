@@ -21,7 +21,6 @@ const authenticateToken = async (req, res, next) => {
       console.log('Token Status:', tokenStatus);
       return res.status(401).json({ error: 'Unauthorized: Token is inactive or invalid' });
     }
-
     req.userId = userId;
     next();
   } catch (error) {

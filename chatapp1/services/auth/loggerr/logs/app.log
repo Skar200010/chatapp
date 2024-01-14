@@ -1,0 +1,35 @@
+{"level":"info","message":"POST 500 ::1 32.410 /register :[req][body] :[res][body]","timestamp":"2024-01-09T10:17:59.113Z"}
+{"level":"info","message":"POST 500 ::1 325.488 /login :[req][body] :[res][body]","timestamp":"2024-01-09T10:18:09.144Z"}
+{"level":"info","message":"POST 200 ::1 240.212 /login :[req][body] :[res][body]","timestamp":"2024-01-09T10:18:38.633Z"}
+{"level":"info","message":"POST 200 ::1 508.007 /login","timestamp":"2024-01-09T11:38:51.613Z"}
+{"level":"info","message":"POST 200 ::1 445.905 /login","timestamp":"2024-01-09T11:58:57.442Z"}
+{"level":"info","message":"POST 200 ::1 283.465 /login :[request][body] :[response][body]","timestamp":"2024-01-09T12:22:48.680Z"}
+{"level":"info","message":"POST 200 ::1 565.271 /login :[request][body] :[response][body]","timestamp":"2024-01-09T12:57:19.544Z"}
+{"level":"info","message":"POST 200 ::1 353.572 /login :[request][body] :[response][body]","timestamp":"2024-01-09T13:10:00.508Z"}
+{"level":"info","message":"POST 401 ::1 333.705 /login :[request][body] :[response][body]","timestamp":"2024-01-10T04:59:10.619Z"}
+{"level":"info","message":"POST 200 ::1 471.190 /login :[request][body] :[response][body]","timestamp":"2024-01-10T04:59:22.063Z"}
+{"level":"info","message":"POST 200 ::1 235.249 /login :[request][body] :[response][body]","timestamp":"2024-01-10T05:23:21.860Z"}
+{"level":"info","message":"POST 404 ::1 224.864 /login :[request][body] :[response][body]","timestamp":"2024-01-10T05:28:31.441Z"}
+{"level":"info","message":"POST 200 ::1 290.846 /login :[request][body] :[response][body]","timestamp":"2024-01-10T05:32:29.065Z"}
+{"level":"info","message":"function getMethodToken (req) {\n  return req.method\n}   undefinedms  :[request][body] undefined :[response][body]","timestamp":"2024-01-10T05:47:56.360Z"}
+{"level":"info","message":"function getMethodToken (req) {\n  return req.method\n}   undefinedms  :[request][body] undefined :[response][body] {\"username\":\"swajeet\",\"password\":\"swajeet@45\"}","timestamp":"2024-01-10T05:49:05.490Z"}
+{"level":"info","message":"POST 200 ::1 ::1 287.137 /login :[request][body] {\"username\":\"swajeet\",\"password\":\"swajeet@45\"} :[response][body]","timestamp":"2024-01-10T06:01:35.681Z"}
+{"level":"info","message":"POST 200 ::1 ::1 273.688 /login :[request][body] {\"username\":\"swajeet\",\"password\":\"swajeet@45\"} :[response][body] undefined","timestamp":"2024-01-10T06:10:10.034Z"}
+{"level":"info","message":"POST 200 ::1 ::1 284.022 /login :[request][body] {\"username\":\"swajeet\",\"password\":\"swajeet@45\"} :[response][body] undefined","timestamp":"2024-01-10T06:14:16.418Z"}
+{"level":"info","message":"POST 200 ::1 ::1 254.457 /login :[request][body] {\"username\":\"swajeet\",\"password\":\"swajeet@45\"} :[response][body]","timestamp":"2024-01-10T06:31:02.507Z"}
+{"level":"info","message":"POST 200 ::1 ::1 237.072 /login :[request][body] {\"username\":\"swajeet\",\"password\":\"swajeet@45\"} :[response][body]","timestamp":"2024-01-10T06:32:25.873Z"}
+{"level":"info","message":"POST 200 ::1 ::1 310.602 /login :[request][body] {\"username\":\"swajeet\",\"password\":\"swajeet@45\"} :[response][body]","timestamp":"2024-01-10T06:35:25.554Z"}
+{"level":"info","message":"POST 200 ::1 ::1 312.784 /login :[request][body] {\"username\":\"swajeet\",\"password\":\"swajeet@45\"} :[response][body]","timestamp":"2024-01-10T06:49:45.328Z"}
+{"level":"info","message":"POST 200 ::1 ::1 430.895 /login :[request][body] {\"username\":\"swajeet\",\"password\":\"swajeet@45\"} :[response][body] \n","timestamp":"2024-01-10T07:10:16.115Z"}
+{"level":"info","message":"POST 200 ::1 ::1 256.765 /login :[request][body] {\"username\":\"swajeet\",\"password\":\"swajeet@45\"} :[response][body] \n","timestamp":"2024-01-10T07:16:30.390Z"}
+{"level":"info","message":"POST 200 ::1 ::1 270.893 /login :[request][body] {\"username\":\"swajeet\",\"password\":\"swajeet@45\"} :[response][body]","timestamp":"2024-01-10T07:19:22.386Z"}
+[info][undefined][undefined][undefinedms][undefined][undefined][req-body: undefined][res-body: undefined]
+[info][undefined][undefined][undefinedms][undefined][undefined][req-body: undefined][res-body: undefined]
+{"level":"info","message":"POST 200 ::1 ::1 349.756 /login :[request][body] {\"username\":\"swajeet\",\"password\":\"swajeet@45\"} :[response][body]","timestamp":"2024-01-10T07:31:25.957Z"}
+{"level":"info","message":"POST 200 ::1 ::1 254.580 /login :[request][body] {\"username\":\"swajeet\",\"password\":\"swajeet@45\"} :[response][body]","timestamp":"2024-01-10T07:33:16.266Z"}
+{"level":"info","message":"POST 200 ::1 ::1 257.291 /login :[request][body] {\"username\":\"swajeet\",\"password\":\"swajeet@45\"} :[response][body]","timestamp":"2024-01-10T07:34:05.054Z"}
+{"level":"info","message":"[REQUEST] POST /login \n[RESPONSE] 200 {\"success\":true,\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OWQxNjE3ZTk5ZjYxZTcyMTAzMGI5MCIsInVzZXJuYW1lIjoic3dhamVldCIsImlhdCI6MTcwNDg3MjM1MSwiZXhwIjoxNzA0ODc1OTUxfQ.osJH7mv9OkEjdXaS85L2B4jQ-0wp5C8ygNrKMXl0nLc\",\"message\":\"Login successful\"}","timestamp":"2024-01-10T07:39:11.680Z"}
+{"level":"info","message":"[REQUEST] POST /login \n[RESPONSE] 200 {\"success\":true,\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OWQxNjE3ZTk5ZjYxZTcyMTAzMGI5MCIsInVzZXJuYW1lIjoic3dhamVldCIsImlhdCI6MTcwNDg3MjQ2MSwiZXhwIjoxNzA0ODc2MDYxfQ.vBGmCF4vy7LudGEImok6nMFvsKz0vMVJNSVourjRiE8\",\"message\":\"Login successful\"}","timestamp":"2024-01-10T07:41:01.711Z"}
+{"level":"info","message":"POST 200 ::1 ::1 234.912 /login :[request][body] {\"username\":\"swajeet\",\"password\":\"swajeet@45\"} :[response][body]","timestamp":"2024-01-10T07:41:01.732Z"}
+{"level":"info","message":"[REQUEST] POST /login \n[RESPONSE] 200 {\"success\":true,\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OWQxNjE3ZTk5ZjYxZTcyMTAzMGI5MCIsInVzZXJuYW1lIjoic3dhamVldCIsImlhdCI6MTcwNDg3MjkyOCwiZXhwIjoxNzA0ODc2NTI4fQ.JTcLsCVTzx_Ly-MZk5czGwx-vkaqU9Vyh7bJ9wt53Pc\",\"message\":\"Login successful\"}","timestamp":"2024-01-10T07:48:48.328Z"}
+{"level":"info","message":"POST 200 ::1 ::1 296.325 /login :[request][body] {\"username\":\"swajeet\",\"password\":\"swajeet@45\"} :[response][body]","timestamp":"2024-01-10T07:48:48.341Z"}

@@ -13,3 +13,4 @@ mongoose.connect("mongodb+srv://khedekarsohan10:Sohan10@cluster0.4faguxu.mongodb
 
 
 //module.exports = connectDatabase;
+// mongodb+srv://khedekarsohan10:Sohan10@cluster0.4faguxu.mongodb.net/Chatapp

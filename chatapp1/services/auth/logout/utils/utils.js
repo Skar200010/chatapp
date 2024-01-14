@@ -16,16 +16,13 @@ const userLogout = async (userId ) => {
     }
 
     await User.findByIdAndUpdate(userId , {$set : {status: "logout"}})
-
-    
+  
    } catch (error) {
     console.error('Error in performLogout:' , error);
     throw new Error ('logout failed')   
     
    }
 }
-
-
 
 module.exports = {
     userLogout,

@@ -17,6 +17,7 @@ const fetchUserProfile = async (userId) => {
     const userProfile = {
       username: user.username,
       email: user.email,
+      userId : user._id
     };
 
     return userProfile;
