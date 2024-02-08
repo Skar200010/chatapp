@@ -14,8 +14,20 @@ const createUser = async (username, email, password) => {
 
   return newUser.save();
 };
+const checkPasswordvalid = async(password) => {
+  const isAlphanumeric = /^(?=.*[a-zA-Z])(?=.*\d).{8,}$/; 
+        const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/; 
+
+    if (!isAlphanumeric.test(password) || !hasSpecialChar.test(password)) {
+      return ({
+        error:
+          'Password must be alphanumeric, contain at least one special character, and have a minimum length of 8 characters',
+      });
+    }
+}
 
 module.exports = {
   checkUserExists,
   createUser,
+  checkPasswordvalid
 };

@@ -7,6 +7,13 @@ const registerService = async (bodyData) => {
       throw new Error('Username, email, and password are required');
     }
 
+    const checkPasswordvalid = await registrationUtil.checkPasswordvalid(password)
+      if(checkPasswordvalid){
+        throw new Error('Password must be alphanumeric, contain at least one special character, and have a minimum length of 8 characters')
+
+      }
+    
+
     const isUserExists = await registrationUtil.checkUserExists(username, email);
     if (isUserExists) {
       throw new Error('Username or email already in use');

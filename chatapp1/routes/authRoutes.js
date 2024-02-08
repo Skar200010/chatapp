@@ -16,7 +16,8 @@ const updatePassword = require('../services/forgetPassword/updatePassword')
 const uploadfileService = require('../services/auth/childProcess/uploadFileService')
 const mailController = require('../controller/emailController')
 const dataReadController = require('../controller/dataReadController')
-
+const userController = require('../controller/userController')
+const otpgenerator = require('../services/auth/otpservice/otpService')
 
 
 // Register a new user
@@ -74,7 +75,11 @@ router.get('/getDatabyId/:id', dataReadController.getDatabyId)
 router.put('/updateData/:id' , dataReadController.updateDataById)
 
 router.delete('/deleteData/:id' , dataReadController.deleteDataById)
+router.get('/getUsers' , userController.getUsers)
+router.put('/updateUser/:id' , userController.updateUserById)
+router.delete('/deleteUser/:id',userController.deleteUserById)
 
+router.post('/otppost', otpgenerator.otpgenerator)
 
 
 module.exports = router

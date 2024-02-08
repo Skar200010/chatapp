@@ -8,7 +8,6 @@ const socketIo = require('socket.io');
 const cors = require('cors');
 const ejs = require('ejs')
 const logger = require('morgan')
-//const logger = require('./services/auth/loggerr/logger')
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const authRouter = require('./routes/authRoutes')
